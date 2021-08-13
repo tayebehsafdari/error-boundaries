@@ -1,15 +1,17 @@
 import './App.scss';
-
-import {Container, Form} from 'react-bootstrap';
-import Counter from "./Counter";
+import {Container} from 'react-bootstrap';
+import ErrorBoundary from "./ErrorBoundary";
+import MyWidget from "./MyWidget";
+import EventHandlers from "./EventHandlers";
 
 function App() {
     return (
-        <div className="App">
+        <div className="App my-5">
             <Container>
-                <Form>
-                    <Counter initialCount={0}/>
-                </Form>
+                <ErrorBoundary>
+                    <MyWidget/>
+                </ErrorBoundary>
+                <EventHandlers/>
             </Container>
         </div>
     );
